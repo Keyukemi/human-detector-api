@@ -9,15 +9,13 @@ import handleProfile from './controllers/profile.js';
 import handleImage from './controllers/image.js';
 import handleImageUrl from './controllers/imageurl.js'
 
+
 //importing knex
 const db = knex({
     client: 'pg',
     connection: {
-      host : '127.0.0.1',
-      port : 5432,
-      user : 'postgres',
-      password : '',
-      database : 'humandetect'
+      connectionString : process.env.DATABASE_URL,
+      ssl : true
     }
   });
 
