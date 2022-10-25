@@ -33,6 +33,7 @@ app.use(express.json());
 //cors allows front end to access API
 app.use(cors())
 
+app.get('/', (req, res)=> {res.send ('It works')})
 
 
 //The sign in post request
