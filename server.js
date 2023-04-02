@@ -29,7 +29,9 @@ const app = express();
 //using bodyparser cos its a middleware
 app.use(express.json());
 //cors allows front end to access API
-app.use(cors())
+app.use(cors({
+  origin: "https://nameless-cliffs-78176.herokuapp.com"
+}))
 
 app.get('/', (req, res) => { res.send('It works') })
 
